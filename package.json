@@ -1,0 +1,36 @@
+{
+  "name": "tellme",
+  "version": "0.1.0",
+  "description": "CommandLine Tool",
+  "main": "tellme.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "clear": "0.0.1",
+    "colors": "^1.1.2",
+    "open": "0.0.5",
+    "opn": "^4.0.2",
+    "prettyjson": "^1.1.3",
+    "request": "^2.75.0",
+    "vorpal": "^1.11.4"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [],
+  "author": "David J. Hernandez",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/davidjavier3430/tellme.git"
+  },
+  "bugs": {
+    "url": "https://github.com/davidjavier3430/tellme/issues"
+  },
+  "homepage": "https://github.com/davidjavier3430/tellme#readme"
+}
