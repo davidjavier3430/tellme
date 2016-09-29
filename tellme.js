@@ -135,8 +135,16 @@ vorpal
   .description('Outputs array documentation')
   .autocomplete(arrayMethods)
   .option('-w', '--website', 'Open the methods url in the browser')
+  .validate(function (args) {
+    if (arrayMethods.includes(args.methodName)) {
+      return true;
+    } else {
+      var helper = 'Enter a valid method\n '.red + arrayMethods.join(' ');
+      return helper;
+    }
+  })
   .action(function(args, callback) {
-    consoleView(args);
+    consoleView(args, 'array');
     callback();
    });
 
@@ -146,8 +154,16 @@ vorpal
 .description('Outputs object documentation')
 .autocomplete(objectMethods)
 .option('-w', '--website', 'Open the methods url in the browser')
+.validate(function (args) {
+  if (objectMethods.includes(args.methodName)) {
+    return true;
+  } else {
+    var helper = 'Enter a valid method\n '.red + arrayMethods.join(' ');
+    return helper;
+  }
+})
 .action(function(args, callback) {
-  consoleView(args);
+  consoleView(args, 'object');
   callback();
  });
 
@@ -157,8 +173,16 @@ vorpal
 .description('Outputs string documentation')
 .autocomplete(stringMethods)
 .option('-w', '--website', 'Open the methods url in the browser')
+.validate(function (args) {
+  if (stringMethods.includes(args.methodName)) {
+    return true;
+  } else {
+    var helper = 'Enter a valid method\n '.red + arrayMethods.join(' ');
+    return helper;
+  }
+})
 .action(function(args, callback) {
-  consoleView(args);
+  consoleView(args, 'string');
   callback();
  });
 

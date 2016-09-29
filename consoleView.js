@@ -7,10 +7,15 @@ var opn = require('opn');
 
 var options = {
   keysColor: 'yellow',
+  stringColor: 'magenta'
 };
 
-module.exports = function(args) {
-  scrapeMdn.search(args.methodName).then((results) => {
+module.exports = function(args, command) {
+  
+  var argument = command + '.' + args.methodName;
+
+  scrapeMdn.search(argument).then((results) => {
+    vorpal.log(args);
     var data = {url, title, description} = results[0];
     if(args.options.website || args.options.w) {
       opn(data.url);
