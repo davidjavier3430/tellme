@@ -11,7 +11,7 @@ var options = {
 };
 
 module.exports = function(args, command) {
-  
+
   var argument = command + '.' + args.methodName;
 
   scrapeMdn.search(argument).then((results) => {
